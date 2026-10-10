@@ -1,0 +1,33 @@
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgb(45, 13, 226), rgb(187, 206, 130) );
+    background-image: url(images/NUSTImage1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
+}
+
+.navigation{
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    margin: 10px;
+
+     display: flex;
+     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+
+
+    
+}

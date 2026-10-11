@@ -1,33 +1,114 @@
-.main{
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.HOME-page {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgba(45, 13, 226, 0.38), rgba(187, 206, 130, 0.25)),
+                url("images/NUSTImage1.jpg") center / cover no-repeat;
+    padding: 20px 24px 40px;
+}
+
+.homepage-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 28px;
+}
+/*.main{
     width: 100%;
     background: linear-gradient(to top, rgb(45, 13, 226), rgb(187, 206, 130) );
     background-image: url(images/NUSTImage1.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
+}*/
 
-
+.navigation a:hover{
+    color: rgb(226, 158, 12);
+    text-decoration: underline;
+}
+.logo{
+    color: rgb(209, 156, 10);
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
 }
 
-.navigation{
-    background-color: black;
-    padding: 10px;
-    margin: 10px;
-    color: white;
+.menu{
+    width: 500px;
+    height: 70px;
+    float: left;
 }
 
-nav a {
-    color: white;
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
     text-decoration: none;
-    padding: 10px;
+    color: white;
     font-weight: 600;
-    margin: 10px;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: rgb(226, 158, 12);
+    text-decoration: underline;
+}
 
-     display: flex;
-     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end;
+/* search bar*/
+.search{
+    width: 330px;
+    height: 70px;
+    float: left;
+    margin-left: 270px;
+}
 
-
-    
+.srch{
+    font-family: 'Times New Roman', Times, serif;
+    width: 250px;
+    height: 23px;
+    background: transparent;
+    border:1px solid #ff7200;
+    margin-top:13px;
+    color: aliceblue;
+    borber-right: none;
+    font: size 20px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+}
+.bn{
+    width: 100px;
+    height: 35px;
+    background: #ff7200;
+    /*background-color: #ff7200;*/
+    border:2px solid #ff7200;
+    margin-top: 13px;
+    font-size: 15px;
+}
+.bn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
 }

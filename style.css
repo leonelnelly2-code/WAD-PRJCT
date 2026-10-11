@@ -16,10 +16,10 @@ body {
 
 .homepage-header {
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
+    gap: 50px;
+    max-width: 1500px;
     margin: 0 auto 28px;
 }
 /*.main{
@@ -46,8 +46,11 @@ body {
 }
 
 .menu{
+    display: flex;
+    justify-content: center;
+    align-items: top;
     width: 500px;
-    height: 70px;
+    /*height: 70px;*/
     float: left;
 }
 
@@ -60,7 +63,7 @@ ul{
 ul li{
     list-style: none;
     margin-left: 62px;
-    margin-top: 27px;
+    margin-top: 0px;
     font-size: 14px;
 }
 ul li a{
@@ -92,8 +95,8 @@ ul li a:hover{
     border:1px solid #ff7200;
     margin-top:13px;
     color: aliceblue;
-    borber-right: none;
-    font: size 20px;
+    border-right: none;
+    font-size: 20px;
     padding: 10px;
     border-bottom-left-radius: 5px;
 }
@@ -111,4 +114,28 @@ ul li a:hover{
 }
 .srch:focus{
     outline: none;
+}
+
+footer{
+    background: linear-gradient(to top, rgba(8, 0, 53, 0.88), rgba(8, 15, 206, 0.75));
+    color: white;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 5px 5px;
+    max-width: 1500px;
+    margin: 0px;
+}
+
+.footer-content{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 5px 5px;
+    max-width: 1500px;
+    margin: 2px;
 }

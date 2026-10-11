@@ -21,14 +21,68 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class = "search">
+        <!-- <div class = "search">
             <input class="srch" type="text" placeholder="Search...">
-            <button class="bn" type="submit">Search</button>
+            <button class="bn" type="submit">Search</button>-->
 
         </div>
         </div>
     </header>
     </div>
     </main>
+
+    <footer>
+        <section class="footer-info">
+            <h2>Web Name</h2>
+            <p>Helping NUST students find their way around campus.</p>
+        </section>
+
+        <section class="footer-contact">
+            <h2>Contact</h2>
+            <address>
+                Namibia University of Science and Technology<br>
+                13 Jackson Kaujeua Street<br>
+                Windhoek, Namibia<br>
+                <a href="mailto:info@campusnav.na">info@campusnav.na</a>
+            </address>
+        </section>
+
+        <p>&copy; 2026 Campus Navigation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Select the footer element
+        const footer = document.querySelector('#page-footer');
+
+        // Configure the observer
+        const options = {
+            root: null, // Uses the browser viewport
+            rootMargin: '0px 0px 150px 0px', // Triggers 150px BEFORE the footer enters the viewport
+            threshold: 0 // Triggers as soon as the bounding margin is crossed
+        };
+
+        // Callback function when intersection occurs
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log('Approaching footer! Triggering action...');
+                    
+                    // Place your custom code here (e.g., stop sticky bars, load items, etc.)
+                    document.body.style.backgroundColor = '#fff9c4'; 
+
+                    // Optional: Unobserve if you only want it to happen once
+                    // observer.unobserve(entry.target);
+                } else {
+                    // Reset when scrolling back up away from the footer
+                    document.body.style.backgroundColor = '';
+                }
+            });
+        };
+
+        // Initialize and start observing
+        const observer = new IntersectionObserver(observerCallback, options);
+        observer.observe(footer);
+    </script>
+
 </body>
 </html>

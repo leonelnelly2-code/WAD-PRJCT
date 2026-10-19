@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Campus Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LOGIN PAGE: standalone sign-in page using the same background image and colours as the homepage. -->
+    <main class="auth-page">
+        <header class="auth-header">
+            <a class="home-logo" href="homepage.html">CAMPUS CONNECT</a>
+            <nav class="auth-nav" aria-label="Main navigation">
+                <a href="homepage.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Registration.html">Register</a>
+            </nav>
+        </header>
+
+        <section class="auth-card" aria-labelledby="login-title">
+            <div class="auth-mark" aria-hidden="true">↗</div>
+            <p class="eyebrow auth-eyebrow">GOOD TO SEE YOU AGAIN</p>
+            <h1 id="login-title">Log in to your account</h1>
+            <p class="auth-description">Access campus information and keep your student experience connected in one place.</p>
+
+            <!-- Login form validates required fields in the browser; real authentication must be implemented server-side. -->
+            <form class="auth-form" id="login-form" action="#" method="post">
+                <label for="login-identity">Email or username</label>
+                <input id="login-identity" name="identity" type="text" placeholder="Enter your email or username" autocomplete="username" required>
+
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required minlength="6">
+
+                <div class="login-options">
+                    <label class="remember-option"><input type="checkbox" name="remember"> Remember me</label>
+                    <a href="#forgot-password" id="forgot-password-link">Forgot password?</a>
+                </div>
+                <button class="home-login-submit" type="submit">Log In</button>
+                <p class="auth-feedback" id="login-feedback" role="status" aria-live="polite"></p>
+            </form>
+            <p class="login-register-prompt">Don't have an account? <a href="Registration.html">Register here</a></p>
+            <a class="back-home-link" href="homepage.html">← Back to homepage</a>
+        </section>
+        <footer class="home-footer auth-footer">Campus Connect · Your campus, connected.</footer>
+    </main>
+
+    <!-- This JavaScript gives clear demo feedback. It does not sign users in or store passwords. -->
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const loginFeedback = document.getElementById('login-feedback');
+        const forgotLink = document.getElementById('forgot-password-link');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (!loginForm.checkValidity()) {
+                loginForm.reportValidity();
+                return;
+            }
+            loginFeedback.textContent = 'The form is valid, but sign-in is not connected yet. Add server-side authentication to verify your account.';
+            loginFeedback.classList.add('is-visible');
+        });
+
+        forgotLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            loginFeedback.textContent = 'Password recovery is not configured yet. Please contact the website administrator.';
+            loginFeedback.classList.add('is-visible');
+        });
+    </script>
+</body>
+</html>

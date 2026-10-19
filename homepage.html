@@ -28,6 +28,50 @@
         </div>
         </div>
     </header>
+            <section class="home-content">
+            <!-- WEBSITE DESCRIPTION: introduction explaining the purpose and value of Campus Connect. -->
+            <div class="home-copy">
+                <p class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</p>
+                <h1>Make campus life <span>easier.</span></h1>
+                <p class="home-description">
+                    Campus Connect is a student-friendly online hub designed to help NUST students find
+                    useful campus information in one convenient place. Discover campus locations, explore
+                    student resources, and connect with the information you need to make everyday campus
+                    life simpler, more organised, and more enjoyable.
+                </p>
+                <div class="home-actions">
+                    <a class="primary-action" href="CampusMap.html">Explore Campus</a>
+                    <a class="secondary-action" href="Registration.html">Create an Account</a>
+                </div>
+                <div class="home-features" aria-label="Website features">
+                    <span>Campus information</span>
+                    <span>Helpful resources</span>
+                    <span>Student-focused</span>
+                </div>
+            </div>
+
+            <!-- HOMEPAGE LOGIN FORM: visitors can enter their email/username and password or open the full login page. -->
+            <aside class="home-login-card" aria-labelledby="home-login-title">
+                <div class="login-icon" aria-hidden="true">↗</div>
+                <h2 id="home-login-title">Welcome back</h2>
+                <p class="login-subtitle">Log in to continue to Campus Connect.</p>
+                <form class="home-login-form" action="Login.html" method="get">
+                    <label for="home-identity">Email or username</label>
+                    <input id="home-identity" name="identity" type="text" placeholder="Enter your email or username" autocomplete="username" required>
+
+                    <label for="home-password">Password</label>
+                    <input id="home-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+
+                    <div class="login-options">
+                        <label class="remember-option"><input type="checkbox" name="remember"> Remember me</label>
+                        <a href="Login.html#forgot-password">Forgot password?</a>
+                    </div>
+                    <button class="home-login-submit" type="submit">Log In</button>
+                </form>
+                <p class="login-register-prompt">New to Campus Connect? <a href="Registration.html">Create an account</a></p>
+                <p class="login-demo-note">Demo interface: account authentication requires a server and database.</p>
+            </aside>
+        </section>
     </div>
     </main>
 

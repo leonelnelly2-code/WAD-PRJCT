@@ -8,8 +8,7 @@ body {
 .registration-page {
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to top, rgba(45, 13, 226, 0.38), rgba(187, 206, 130, 0.25)),
-                url("images/NUSTImage1.jpg") center / cover no-repeat;
+    background-image: linear-gradient(rgba(8, 13, 34, 0.85), rgba(13, 19, 39, 0.85)), url("../images/NUSTImage1.jpg");
     padding: 20px 24px 40px;
 }
 .registration-header {

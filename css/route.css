@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: linear-gradient(rgba(8, 13, 34, 0.85), rgba(13, 19, 39, 0.85)), url("../images/NUSTImage1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+.route-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.route-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.route-header h1 {
+    color: #1D3557;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.route-header p {
+    color: #555;
+    font-size: 16px;
+}
+
+.route-form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #F2A900; 
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1D3557;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: #F2A900;
+    color: #171717;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #d19000;
+}
+
+.directions-result {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #1D3557;
+}
+
+.directions-result h2 {
+    color: #1D3557;
+    margin-bottom: 5px;
+}
+
+.route-time {
+    color: #F2A900;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.step-list {
+    list-style: none;
+    padding: 0;
+}
+
+.step-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.step-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step-number {
+    background: #1D3557;
+    color: #fff;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.step-list p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+@media (max-width: 600px) {
+    .route-form-card, .directions-result {
+        padding: 20px;
+    }
+}

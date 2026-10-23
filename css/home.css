@@ -1,3 +1,14 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgba(8, 13, 34, 0.85), rgba(13, 19, 39, 0.85)), url("../images/NUSTImage1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,18 +21,10 @@ body {
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(to top, rgba(45, 13, 226, 0.38), rgba(187, 206, 130, 0.25)),
-                url("images/NUSTImage1.jpg") center / cover no-repeat;
+                url("../images/NUSTImage1.jpg") center / cover no-repeat;
     padding: 20px 24px 40px;
 }
 
-.homepage-header {
-    display: flex;
-    align-items: top;
-    justify-content: space-between;
-    gap: 50px;
-    max-width: 1500px;
-    margin: 0 auto 28px;
-}
 /*.main{
     width: 100%;
     background: linear-gradient(to top, rgb(45, 13, 226), rgb(187, 206, 130) );
@@ -50,7 +53,6 @@ body {
     justify-content: center;
     align-items: top;
     width: 500px;
-    /*height: 70px;*/
     float: left;
 }
 
@@ -79,7 +81,7 @@ ul li a:hover{
     text-decoration: underline;
 }
 
-/* search bar*/
+
 .search{
     width: 330px;
     height: 70px;
@@ -104,7 +106,7 @@ ul li a:hover{
     width: 100px;
     height: 35px;
     background: #ff7200;
-    /*background-color: #ff7200;*/
+
     border:2px solid #ff7200;
     margin-top: 13px;
     font-size: 15px;
@@ -140,14 +142,6 @@ footer{
     margin: 2px;
 }
 
-
-/* =====================================================
-   CAMPUS CONNECT HOMEPAGE AND LOGIN PAGE
-   Background: NUSTImage1.jpg
-   Colours: Dark navy, white, orange and gold
-   ===================================================== */
-
-/* General styling */
 * {
     box-sizing: border-box;
 }
@@ -157,7 +151,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Homepage and login page background */
 .home-page,
 .auth-page {
     min-height: 100vh;
@@ -177,14 +170,11 @@ body {
     background-attachment: fixed;
 }
 
-/* Homepage layout */
 .home-page {
     display: flex;
     flex-direction: column;
 }
 
-/* Navigation header */
-.home-header,
 .auth-header {
     width: min(1200px, calc(100% - 48px));
     margin: 0 auto;
@@ -196,7 +186,6 @@ body {
     gap: 24px;
 }
 
-/* Website logo */
 .home-logo {
     color: #ffb347;
     text-decoration: none;
@@ -206,7 +195,6 @@ body {
     white-space: nowrap;
 }
 
-/* Navigation links */
 .home-nav,
 .auth-nav {
     display: flex;
@@ -230,7 +218,6 @@ body {
     color: #ffb347;
 }
 
-/* Register button in navigation */
 .home-nav .nav-register {
     padding: 10px 16px;
     border: 1px solid #ff7200;
@@ -242,10 +229,9 @@ body {
     color: #171717;
 }
 
-/* Main homepage content */
 .home-content {
     width: min(1200px, calc(100% - 48px));
-    margin: auto;
+    margin: 20px;
     padding: 44px 0 54px;
 
     display: grid;
@@ -257,7 +243,6 @@ body {
     gap: clamp(36px, 7vw, 100px);
 }
 
-/* Homepage description section */
 .home-copy {
     max-width: 660px;
 }
@@ -265,13 +250,13 @@ body {
 .eyebrow {
     margin: 0 0 16px;
     color: #ffb347;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: 2.5px;
 }
 
-/* Main homepage heading */
 .home-copy h1 {
+    color: #ffffff;
     max-width: 650px;
     margin: 0 0 22px;
     font-size: clamp(42px, 5.5vw, 72px);
@@ -283,7 +268,6 @@ body {
     color: #ffb347;
 }
 
-/* Website description paragraph */
 .home-description {
     max-width: 610px;
     margin: 0;
@@ -292,7 +276,6 @@ body {
     line-height: 1.85;
 }
 
-/* Homepage action buttons */
 .home-actions {
     display: flex;
     flex-wrap: wrap;
@@ -334,7 +317,6 @@ body {
     border-color: #ffb347;
 }
 
-/* Homepage feature labels */
 .home-features {
     display: flex;
     flex-wrap: wrap;
@@ -351,7 +333,6 @@ body {
     font-size: 12px;
 }
 
-/* Homepage login card and standalone login card */
 .home-login-card,
 .auth-card {
     width: 100%;
@@ -366,13 +347,11 @@ body {
     backdrop-filter: blur(9px);
 }
 
-/* Homepage login card position */
 .home-login-card {
     max-width: 430px;
     justify-self: end;
 }
 
-/* Login icon */
 .login-icon,
 .auth-mark {
     display: grid;
@@ -388,13 +367,11 @@ body {
     font-weight: 700;
 }
 
-/* Login headings */
 .home-login-card h2 {
     margin: 0 0 8px;
     font-size: 27px;
 }
 
-/* Login descriptions */
 .login-subtitle,
 .auth-description {
     margin: 0 0 23px;
@@ -403,7 +380,7 @@ body {
     line-height: 1.65;
 }
 
-/* Login form labels */
+
 .home-login-form label,
 .auth-form > label {
     display: block;
@@ -413,7 +390,7 @@ body {
     font-weight: 700;
 }
 
-/* Username and password inputs */
+
 .home-login-form input[type="text"],
 .home-login-form input[type="password"],
 .auth-form input[type="text"],
@@ -431,14 +408,14 @@ body {
     font-size: 14px;
 }
 
-/* Input focus effect */
+
 .home-login-form input:focus,
 .auth-form input:focus {
     outline: 2px solid #ffb347;
     outline-offset: 2px;
 }
 
-/* Remember me and forgot password row */
+
 .login-options {
     display: flex;
     justify-content: space-between;
@@ -448,7 +425,7 @@ body {
     font-size: 12px;
 }
 
-/* Login links */
+
 .login-options a,
 .login-register-prompt a {
     color: #ffb347;
@@ -461,7 +438,7 @@ body {
     text-decoration: underline;
 }
 
-/* Remember me checkbox */
+
 .remember-option {
     display: inline-flex !important;
     align-items: center;
@@ -474,7 +451,6 @@ body {
     accent-color: #ff7200;
 }
 
-/*submit button */
 .home-login-submit {
     width: 100%;
     min-height: 46px;
@@ -495,7 +471,6 @@ body {
     background: #ffb347;
 }
 
-/* Register prompt under login form */
 .login-register-prompt {
     margin: 20px 0 0;
     text-align: center;
@@ -503,7 +478,6 @@ body {
     font-size: 13px;
 }
 
-/* Demo notice */
 .login-demo-note {
     margin: 15px 0 0;
     color: #aeb8ca;
@@ -512,7 +486,6 @@ body {
     line-height: 1.5;
 }
 
-/* Homepage footer */
 .home-footer {
     padding: 18px 24px 22px;
     color: #c2c9d7;
@@ -520,22 +493,17 @@ body {
     font-size: 12px;
 }
 
-/* =====================================================
-   SEPARATE LOGIN PAGE
-   ===================================================== */
 
 .auth-page {
     display: flex;
     flex-direction: column;
 }
 
-/* Standalone login card */
 .auth-card {
     max-width: 470px;
     margin: 28px auto 45px;
 }
 
-/* Login page heading */
 .auth-card h1 {
     margin: 0 0 12px;
     font-size: clamp(26px, 4vw, 34px);
@@ -550,7 +518,6 @@ body {
     margin-top: 12px;
 }
 
-/* Form feedback message */
 .auth-feedback {
     display: none;
     margin: 14px 0 0;
@@ -570,7 +537,6 @@ body {
     display: block;
 }
 
-/* Back to homepage link */
 .back-home-link {
     display: block;
     margin-top: 22px;
@@ -587,10 +553,6 @@ body {
 .auth-footer {
     margin-top: auto;
 }
-
-/* =====================================================
-   RESPONSIVE DESIGN: TABLETS
-   ===================================================== */
 
 @media (max-width: 850px) {
     .home-content {
@@ -609,12 +571,8 @@ body {
     }
 }
 
-/* =====================================================
-   RESPONSIVE DESIGN: MOBILE PHONES
-   ===================================================== */
 
 @media (max-width: 600px) {
-    .home-header,
     .auth-header {
         width: calc(100% - 32px);
         flex-direction: column;

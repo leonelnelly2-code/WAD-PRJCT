@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Map | Campus Compass</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Global styles first, then map-specific styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleMap.css">
+</head>
+<body>
+
+  <header class="mapTop">
+    <a class="mapBrand" href="index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+      </svg>
+      Campus Compass
+    </a>
+    
+    <nav class="mapNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <!-- REMOVED: <a href="DataListing.html">Buildings</a> -->
+      <a href="CampusMap.html" aria-current="page">Campus Map</a>
+      <a href="UserDashboard.html">Dashboard</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="mapHero">
+    <div class="mapWrap">
+      <h1>Find your way around campus</h1>
+      <p>From the gate to your lecture venue, without the wandering.</p>
+      <ol class="heroSteps">
+        <li>Select a dot to see the place</li>
+        <li>Choose where you start and where you are going</li>
+        <li>Follow the line on the map</li>
+      </ol>
+    </div>
+  </section>
+
+  <main class="mapWrap mapPage">
+
+    <!-- LEFT: the map -->
+    <section class="mapArea" aria-label="Campus map">
+      <svg id="mapSvg" viewBox="0 0 2399 1248">
+        <image href="images/CampusMap.png" width="2399" height="1248"></image>
+        <g id="lineLayer"></g>
+        <g id="dotLayer"></g>
+        <g id="labelLayer"></g>
+      </svg>
+
+      <p class="mapLegend">
+        <span><i class="swatch sBuilding"></i>Building</span>
+        <span><i class="swatch sGate"></i>Gate</span>
+        <span><i class="swatch sStart"></i>Start</span>
+        <span><i class="swatch sEnd"></i>Destination</span>
+      </p>
+    </section>
+
+    <!-- RIGHT: photo card, form -->
+    <aside class="sidePanel">
+
+      <article class="mapCard" id="placeCard">
+        <div id="cardEmpty" class="cardEmpty">
+          <div class="emptyIcon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </div>
+          <h2>Pick a place</h2>
+          <p>Select any gate or building on the map to see what it looks like.</p>
+        </div>
+
+        <div id="cardContent" hidden>
+          <div class="photoBox" id="photoBox">
+            <img id="cardPhoto" alt="">
+            <span class="badge" id="cardBadge"></span>
+            <div class="photoOverlay"><h2 id="cardName"></h2></div>
+          </div>
+          <div class="cardBody">
+            <p id="cardInfo"></p>
+            <div class="btnRow">
+              <button type="button" class="mapBtn btnStart" id="setFromBtn">Start here</button>
+              <button type="button" class="mapBtn btnEnd" id="setToBtn">Go here</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <form id="routeForm" class="mapCard formCard">
+        <h2>Plan your walk</h2>
+
+        <label for="fromBox">From</label>
+        <select id="fromBox"></select>
+
+        <div class="swapRow">
+          <button type="button" id="swapBtn" class="swapBtn">&#8645; Swap</button>
+        </div>
+
+        <label for="toBox">To</label>
+        <select id="toBox"></select>
+
+        <p id="message" role="alert"></p>
+
+        <div class="btnRow">
+          <button type="submit" class="mapBtn mainBtn">Show route</button>
+          <button type="button" id="clearBtn" class="mapBtn ghostBtn">Clear</button>
+        </div>
+      </form>
+
+    </aside>
+  </main>
+
+  <script src="js/campusData.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
